@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Souvik Sarkar — Network Support Executive</title>
+  <meta name="description"
+    content="Portfolio of Souvik Sarkar — Network Support Executive specializing in hospitality IT infrastructure, enterprise systems, and network management.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      font-family: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #44403c;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #57534e;
+    }
+
+    .glass {
+      background: rgba(23, 23, 23, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .glass-subtle {
+      background: rgba(23, 23, 23, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #e7e5e4, #a8a29e, #78716c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-text {
+      background: linear-gradient(135deg, #67e8f9, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Reveal System - Enhanced with blur, scale & stagger */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px) scale(0.97);
+      filter: blur(4px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-60px) scale(0.97);
+      filter: blur(4px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      filter: blur(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(60px) scale(0.97);
+      filter: blur(4px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      filter: blur(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.85);
+      filter: blur(6px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-scale.active {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+
+    /* Hover - Enhanced with scale + cyan glow */
+    .card-hover {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.6s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 60px -15px rgba(6, 182, 212, 0.15),
+        0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Animated Project Card Border */
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    .project-card {
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      /* Extend border slightly outside */
+      border-radius: 18px;
+      /* Match inner border-radius (16px) + inset (2px) */
+      background: conic-gradient(from var(--angle), transparent 0%, rgba(6, 190, 212, 0.1) 30%, rgba(6, 190, 212, 0.9) 50%, rgba(6, 190, 212, 0.1) 70%, transparent 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 2px;
+      /* Border thickness */
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+      animation: spin-angle 3s linear infinite;
+    }
+
+    @keyframes spin-angle {
+      to {
+        --angle: 360deg;
+      }
+    }
+
+    /* Animated Button Border */
+    .btn-glow {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-glow::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 14px;
+      /* Match inner rounded-xl (12px) + inset (2px) */
+      background: conic-gradient(from var(--angle), transparent 0%, rgba(6, 190, 212, 0.1) 30%, rgba(6, 190, 212, 0.9) 50%, rgba(6, 190, 212, 0.1) 70%, transparent 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 2px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .btn-glow:hover::before {
+      opacity: 1;
+      animation: spin-angle 3s linear infinite;
+    }
+
+    /* Nav */
+    .nav-link {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+      box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* Skill bar - Enhanced with shimmer */
+    .skill-fill {
+      width: 0;
+      transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      animation: shimmer 2s ease-in-out infinite;
+      animation-delay: 1.6s;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 200%;
+      }
+    }
+
+    /* Timeline */
+    .timeline-bar {
+      width: 1px;
+      background: linear-gradient(180deg, rgba(6, 190, 212, 0.4), rgba(120, 113, 108, 0.2), transparent);
+    }
+
+    .timeline-pip {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #0a0a0a;
+      border: 2px solid #06b6d4;
+      box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);
+      transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .timeline-pip::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .timeline-pip:hover {
+      box-shadow: 0 0 0 8px rgba(6, 182, 212, 0.15);
+      transform: scale(1.3);
+    }
+
+    .timeline-pip:hover::after {
+      opacity: 1;
+      animation: pip-ping 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+
+    @keyframes pip-ping {
+      0% {
+        inset: -4px;
+        opacity: 0.8;
+      }
+
+      100% {
+        inset: -16px;
+        opacity: 0;
+      }
+    }
+
+    /* Noise texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* Grid bg */
+    .grid-bg {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    /* Divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(168, 162, 158, 0.15), transparent);
+    }
+
+    /* Mobile menu */
+    .mobile-nav {
+      transform: translateX(100%);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mobile-nav.open {
+      transform: translateX(0);
+    }
+
+    /* Toast */
+    .toast {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Focus */
+    input:focus-visible,
+    textarea:focus-visible,
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid #06b6d4;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .glass,
+      .glass-subtle {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        backdrop-filter: none;
+      }
+
+      .gradient-text,
+      .accent-text {
+        -webkit-text-fill-color: #000;
+      }
+
+      .section-divider {
+        background: #ddd;
+      }
+    }
+  </style>
+</head>
+
+<body class="grid-bg">
+
+  <!-- Global Particle Canvas -->
+  <canvas id="particleCanvas" class="fixed inset-0 w-full h-full z-0 pointer-events-none no-print"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 no-print" role="navigation"
+    aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2.5 group" aria-label="Home">
+        <div
+          class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center text-black font-bold text-sm">
+          SS</div>
+        <span class="hidden sm:block text-sm font-medium text-stone-300 group-hover:text-white transition-colors">Souvik
+          Sarkar</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link text-[13px] text-stone-400 hover:text-white transition-colors">About</a>
+        <a href="#skills" class="nav-link text-[13px] text-stone-400 hover:text-white transition-colors">Skills</a>
+        <a href="#experience"
+          class="nav-link text-[13px] text-stone-400 hover:text-white transition-colors">Experience</a>
+        <a href="#education"
+          class="nav-link text-[13px] text-stone-400 hover:text-white transition-colors">Education</a>
+        <a href="#contact"
+          class="px-4 py-2 text-[13px] font-medium bg-white text-black rounded-lg hover:bg-stone-200 transition-colors">Contact
+          Me</a>
+      </div>
+      <button id="menuToggle"
+        class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors"
+        onclick="toggleMobileMenu()" aria-label="Toggle menu" aria-expanded="false">
+        <span class="iconify" data-icon="mdi:menu" data-width="20" id="menuIcon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileNav"
+    class="mobile-nav fixed inset-y-0 right-0 w-72 z-[60] bg-neutral-950/98 backdrop-blur-2xl border-l border-white/5 flex flex-col no-print"
+    role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between px-6 h-16 border-b border-white/5">
+      <span class="text-sm font-medium text-stone-300">Menu</span>
+      <button onclick="toggleMobileMenu()"
+        class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors"
+        aria-label="Close menu">
+        <span class="iconify" data-icon="mdi:close" data-width="20"></span>
+      </button>
+    </div>
+    <div class="flex flex-col p-6 gap-1">
+      <a href="#about" onclick="toggleMobileMenu()"
+        class="px-4 py-3 rounded-xl text-stone-300 hover:text-white hover:bg-white/5 transition-all text-sm">About</a>
+      <a href="#skills" onclick="toggleMobileMenu()"
+        class="px-4 py-3 rounded-xl text-stone-300 hover:text-white hover:bg-white/5 transition-all text-sm">Skills</a>
+      <a href="#experience" onclick="toggleMobileMenu()"
+        class="px-4 py-3 rounded-xl text-stone-300 hover:text-white hover:bg-white/5 transition-all text-sm">Experience</a>
+      <a href="#education" onclick="toggleMobileMenu()"
+        class="px-4 py-3 rounded-xl text-stone-300 hover:text-white hover:bg-white/5 transition-all text-sm">Education</a>
+      <a href="#contact" onclick="toggleMobileMenu()"
+        class="px-4 py-3 rounded-xl text-stone-300 hover:text-white hover:bg-white/5 transition-all text-sm">Contact</a>
+    </div>
+    <div class="mt-auto p-6 border-t border-white/5">
+      <a href="mailto:souviksarkardev@gmail.com"
+        class="flex items-center gap-3 text-sm text-stone-400 hover:text-cyan-400 transition-colors">
+        <span class="iconify" data-icon="mdi:email-outline" data-width="18"></span>
+        souviksarkardev@gmail.com
+      </a>
+    </div>
+  </div>
+  <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-[55] hidden no-print" onclick="toggleMobileMenu()"></div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="relative min-h-screen flex items-center px-6 overflow-hidden">
+    <!-- Subtle ambient light -->
+    <div
+      class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-b from-cyan-900/[0.07] to-transparent rounded-full blur-3xl pointer-events-none z-0">
+    </div>
+
+    <div
+      class="max-w-6xl mx-auto w-full pt-24 pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
+      <div class="max-w-3xl flex-1">
+        <!-- Status badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-subtle mb-8"
+          style="animation: fadeIn 0.8s ease both;">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span class="text-[11px] font-medium uppercase tracking-[0.2em] text-cyan-400">Open to Opportunities</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6"
+          style="animation: fadeIn 0.8s ease 0.15s both;">
+          Souvik<br><span class="accent-text">Sarkar</span>
+        </h1>
+
+        <!-- Role -->
+        <div class="h-7 mb-6" style="animation: fadeIn 0.8s ease 0.3s both;">
+          <span id="typedRole" class="text-lg sm:text-xl text-stone-400 font-light"></span>
+          <span class="inline-block w-px h-5 bg-cyan-500/70 ml-0.5 align-middle animate-pulse"></span>
+        </div>
+
+        <!-- Summary -->
+        <p class="text-stone-500 text-base sm:text-lg font-light leading-relaxed max-w-xl mb-10"
+          style="animation: fadeIn 0.8s ease 0.45s both;">
+          Network Support Executive with 3+ years of experience in IT infrastructure, network administration, and
+          end-user support in the hospitality industry, ensuring maximum uptime and guest service continuity.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-3 mb-16" style="animation: fadeIn 0.8s ease 0.6s both;">
+          <a href="#experience"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-xl hover:bg-stone-200 transition-colors group">
+            View Experience
+            <span class="iconify group-hover:translate-x-0.5 transition-transform" data-icon="mdi:arrow-right"
+              data-width="16"></span>
+          </a>
+          <a href="mailto:souviksarkardev@gmail.com"
+            class="btn-glow inline-flex items-center gap-2 px-6 py-3 glass text-stone-300 text-sm font-medium rounded-xl hover:bg-white/[0.06] transition-colors">
+            <!-- Tailwind's cyan-500 is #06b6d4 -->
+            <span class="iconify" data-icon="mdi:email-outline" data-width="16"></span>
+            Get In Touch
+          </a>
+          <a href="assets/Souvik Sarkar.pdf" download
+            class="inline-flex items-center gap-2 px-6 py-3 glass-subtle text-cyan-500 text-sm font-semibold rounded-xl hover:bg-cyan-500/10 transition-colors border border-cyan-500/20 group shadow-[0_0_20px_rgba(6,190,212,0.05)]">
+            <span class="iconify group-hover:translate-y-0.5 transition-transform" data-icon="mdi:download-outline"
+              data-width="17"></span>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex items-center gap-10 sm:gap-14" style="animation: fadeIn 0.8s ease 0.75s both;">
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-white counter-tabular" data-target="3" data-suffix="+">0
+            </div>
+            <div class="text-[11px] text-stone-500 uppercase tracking-[0.15em] mt-0.5">Years Experience</div>
+          </div>
+          <div class="w-px h-10 bg-white/10"></div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-white counter-tabular" data-target="200" data-suffix="+">0
+            </div>
+            <div class="text-[11px] text-stone-500 uppercase tracking-[0.15em] mt-0.5">Devices Managed</div>
+          </div>
+          <div class="w-px h-10 bg-white/10"></div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-white counter-tabular" data-target="3" data-suffix="">0
+            </div>
+            <div class="text-[11px] text-stone-500 uppercase tracking-[0.15em] mt-0.5">Certifications</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Profile Image -->
+      <div class="hidden lg:block relative w-full max-w-[420px]" style="animation: fadeIn 1.2s ease 0.9s both;">
+        <div
+          class="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden glass border border-white/10 shadow-2xl group text-center">
+          <img src="assets/Souvik.jpg" alt="Souvik Sarkar"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+        <!-- Ambient glows -->
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/10 blur-[80px] rounded-full -z-10 animate-pulse">
+        </div>
+        <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-cyan-900/10 blur-[100px] rounded-full -z-10 animate-pulse"
+          style="animation-delay: 1s;"></div>
+
+        <!-- Badge -->
+        <div
+          class="absolute -bottom-6 -right-6 glass px-5 py-3 rounded-2xl border border-white/10 shadow-xl z-20 flex items-center gap-3 animate-bounce"
+          style="animation-duration: 4s;">
+          <div
+            class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+            <span class="iconify text-cyan-500" data-icon="mdi:shield-check" data-width="18"></span>
+          </div>
+          <div>
+            <div class="text-[10px] text-stone-500 uppercase tracking-wider font-bold">Verified Expert</div>
+            <div class="text-[12px] text-white font-semibold">IT Infrastructure</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 no-print"
+      style="animation: fadeIn 1s ease 1.2s both;">
+      <span class="text-[10px] text-stone-600 uppercase tracking-[0.25em]">Scroll</span>
+      <div class="w-4 h-6 rounded-full border border-stone-700 flex items-start justify-center p-1">
+        <div class="w-0.5 h-1.5 bg-stone-500 rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider max-w-6xl mx-auto"></div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-24 sm:py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-500/80">About</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">Professional <span
+            class="gradient-text">Overview</span></h2>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+        <!-- Left column -->
+        <div class="lg:col-span-2 reveal-left">
+          <div class="glass rounded-2xl p-6 space-y-5">
+            <!-- Avatar placeholder -->
+            <div
+              class="w-full aspect-[4/3] rounded-xl bg-neutral-900 flex items-center justify-center relative overflow-hidden group">
+              <img src="assets/lalit.jpeg" alt="The LaLiT Great Eastern"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-center gap-2">
+                <span class="relative flex h-2 w-2">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="text-[11px] text-stone-400">Currently at The LaLiT Great Eastern</span>
+              </div>
+            </div>
+
+            <!-- Quick info -->
+            <div class="space-y-3 pt-1">
+              <div class="flex items-start gap-3">
+                <span class="iconify text-stone-600 mt-0.5 flex-shrink-0" data-icon="mdi:map-marker-outline"
+                  data-width="16"></span>
+                <div>
+                  <div class="text-[11px] text-stone-600 uppercase tracking-wider">Location</div>
+                  <div class="text-sm text-stone-300">Sodepur, N 24 Parganas, West Bengal - 700110</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="iconify text-stone-600 mt-0.5 flex-shrink-0" data-icon="mdi:email-outline"
+                  data-width="16"></span>
+                <div>
+                  <div class="text-[11px] text-stone-600 uppercase tracking-wider">Email</div>
+                  <a href="mailto:souviksarkardev@gmail.com"
+                    class="text-sm text-stone-300 hover:text-cyan-400 transition-colors">souviksarkardev@gmail.com</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="iconify text-stone-600 mt-0.5 flex-shrink-0" data-icon="mdi:phone-outline"
+                  data-width="16"></span>
+                <div>
+                  <div class="text-[11px] text-stone-600 uppercase tracking-wider">Phone</div>
+                  <a href="tel:+917003520276" class="text-sm text-stone-300 hover:text-cyan-400 transition-colors">+91
+                    7003520276</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="iconify text-stone-600 mt-0.5 flex-shrink-0" data-icon="mdi:calendar-outline"
+                  data-width="16"></span>
+                <div>
+                  <div class="text-[11px] text-stone-600 uppercase tracking-wider">Date of Birth</div>
+                  <div class="text-sm text-stone-300">19 February 1997</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="iconify text-stone-600 mt-0.5 flex-shrink-0" data-icon="mdi:card-account-details-outline"
+                  data-width="16"></span>
+                <div>
+                  <div class="text-[11px] text-stone-600 uppercase tracking-wider">Nationality & Status</div>
+                  <div class="text-sm text-stone-300">Indian · Married</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="iconify text-stone-600 mt-0.5 flex-shrink-0" data-icon="mdi:gender-male-female"
+                  data-width="16"></span>
+                <div>
+                  <div class="text-[11px] text-stone-600 uppercase tracking-wider">Gender</div>
+                  <div class="text-sm text-stone-300">Male</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="pt-3 border-t border-white/5">
+              <div class="text-[11px] text-stone-600 uppercase tracking-wider mb-2">Languages</div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-400 border border-white/[0.06]"
+                  title="Professional Working Proficiency">English</span>
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-400 border border-white/[0.06]"
+                  title="Professional Working Proficiency">Hindi</span>
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-400 border border-white/[0.06]"
+                  title="Native Proficiency">Bengali</span>
+              </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="pt-3 border-t border-white/5">
+              <div class="text-[11px] text-stone-600 uppercase tracking-wider mb-2">Interests</div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-500 border border-white/[0.06]">Emerging
+                  Tech</span>
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-500 border border-white/[0.06]">System
+                  Admin</span>
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-500 border border-white/[0.06]">Freelancing</span>
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-500 border border-white/[0.06]">Continuous
+                  Learning</span>
+                <span
+                  class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white/[0.04] text-stone-500 border border-white/[0.06]">Gaming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="lg:col-span-3 reveal-right space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold tracking-tight mb-3">Professional Summary</h3>
+            <p class="text-stone-400 font-light leading-[1.8] text-[15px]">
+              Network Support Executive with 3+ years of experience in IT infrastructure, network administration, and
+              end-user support within the hospitality industry. Experienced in maintaining enterprise LAN/WAN and Wi-Fi
+              networks, troubleshooting hardware, software, and network issues, and supporting mission-critical hotel
+              applications including Oracle Opera Cloud PMS, Symphony Cloud POS, and WebPrologic Store Management.
+              Skilled in Windows administration, NAS backup management, IT asset management, vendor coordination, and
+              Level 1/2 technical support. Proven ability to ensure high system availability, minimize downtime, and
+              deliver reliable IT services in 24×7 business environments. A proactive problem solver committed to
+              operational excellence, business continuity, and continuous professional development.
+            </p>
+          </div>
+
+          <!-- Key strengths grid -->
+          <div class="grid sm:grid-cols-2 gap-3 pt-2">
+            <div class="glass-subtle rounded-xl p-4 card-hover">
+              <span class="iconify text-cyan-500/80 mb-2" data-icon="mdi:server-network" data-width="20"></span>
+              <h4 class="text-sm font-medium text-stone-200 mb-1">Infrastructure Management</h4>
+              <p class="text-[12px] text-stone-500 leading-relaxed">80+ Desktops, 40+ Laptops, 16 Servers — daily
+                maintenance and L1/L2 support.</p>
+            </div>
+            <div class="glass-subtle rounded-xl p-4 card-hover">
+              <span class="iconify text-cyan-500/80 mb-2" data-icon="mdi:wifi" data-width="20"></span>
+              <h4 class="text-sm font-medium text-stone-200 mb-1">Enterprise Connectivity</h4>
+              <p class="text-[12px] text-stone-500 leading-relaxed">Managed LAN, WAN, and Wi-Fi networks for secure,
+                high-speed connectivity.</p>
+            </div>
+            <div class="glass-subtle rounded-xl p-4 card-hover">
+              <span class="iconify text-cyan-500/80 mb-2" data-icon="mdi:shield-check-outline" data-width="20"></span>
+              <h4 class="text-sm font-medium text-stone-200 mb-1">Data Integrity & Backup</h4>
+              <p class="text-[12px] text-stone-500 leading-relaxed">NAS backup management, executing daily and weekly
+                backups to safeguard critical data.</p>
+            </div>
+            <div class="glass-subtle rounded-xl p-4 card-hover">
+              <span class="iconify text-cyan-500/80 mb-2" data-icon="mdi:handshake-outline" data-width="20"></span>
+              <h4 class="text-sm font-medium text-stone-200 mb-1">Vendor & Support</h4>
+              <p class="text-[12px] text-stone-500 leading-relaxed">Efficient incident management, vendor coordination,
+                and SLA-driven support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider max-w-6xl mx-auto"></div>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="py-24 sm:py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-500/80">Expertise</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">Technical <span
+            class="gradient-text">Skills</span></h2>
+      </div>
+
+      <!-- Skill Categories -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0s">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+              <span class="iconify text-cyan-500" data-icon="mdi:desktop-classic" data-width="18"></span>
+            </div>
+            <h3 class="text-base font-semibold tracking-tight">Hardware & Systems</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>PC Assembly & Upgrades</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Hardware Troubleshooting</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>OS Installation & Deploy</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Printers & Peripherals</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>BIOS & Firmware Updates</li>
+          </ul>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.1s">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+              <span class="iconify text-cyan-500" data-icon="mdi:lan" data-width="18"></span>
+            </div>
+            <h3 class="text-base font-semibold tracking-tight">Networking</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>LAN, WAN & Enterprise Wi-Fi</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>TCP/IP, DNS & DHCP Support</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Cabling & RJ45 Crimping</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Switch & AP Installation</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Outlook & PST Recovery</li>
+          </ul>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.2s">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+              <span class="iconify text-cyan-500" data-icon="mdi:server-network" data-width="18"></span>
+            </div>
+            <h3 class="text-base font-semibold tracking-tight">IT Infrastructure</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Active Directory (Basic)</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Windows Server Admin</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>VMware Virtualization</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>NAS Backup Management</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>IT Asset Mgmt & Cabling</li>
+          </ul>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.3s">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+              <span class="iconify text-cyan-500" data-icon="mdi:briefcase-outline" data-width="18"></span>
+            </div>
+            <h3 class="text-base font-semibold tracking-tight">Professional Support</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Vendor & Supplier Mgmt</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>IT Compliance & Policies</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Help Desk L1/L2 Support</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Incident & SLA Mgmt</li>
+            <li class="flex items-center gap-2.5 text-[13px] text-stone-400"><span
+                class="w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span>Preventive Maintenance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Proficiency Bars -->
+      <div class="glass rounded-2xl p-6 sm:p-8 reveal">
+        <h3 class="text-base font-semibold tracking-tight mb-6">Proficiency Levels</h3>
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-5">
+          <div class="skill-row">
+            <div class="flex justify-between mb-1.5"><span class="text-[13px] text-stone-300">Opera Cloud & POS
+                Systems</span><span class="text-[12px] text-cyan-500/80 font-medium">95%</span></div>
+            <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+              <div class="skill-fill h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" data-width="95">
+              </div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between mb-1.5"><span class="text-[13px] text-stone-300">Network
+                Administration</span><span class="text-[12px] text-cyan-500/80 font-medium">90%</span></div>
+            <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+              <div class="skill-fill h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" data-width="90">
+              </div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between mb-1.5"><span class="text-[13px] text-stone-300">Hardware
+                Troubleshooting</span><span class="text-[12px] text-cyan-500/80 font-medium">92%</span></div>
+            <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+              <div class="skill-fill h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" data-width="92">
+              </div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between mb-1.5"><span class="text-[13px] text-stone-300">NAS Backup
+                Solutions</span><span class="text-[12px] text-cyan-500/80 font-medium">88%</span></div>
+            <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+              <div class="skill-fill h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" data-width="88">
+              </div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between mb-1.5"><span class="text-[13px] text-stone-300">Vendor & Supplier
+                Mgmt</span><span class="text-[12px] text-cyan-500/80 font-medium">85%</span></div>
+            <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+              <div class="skill-fill h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" data-width="85">
+              </div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between mb-1.5"><span class="text-[13px] text-stone-300">Programming
+                (Python/Java/Solidity)</span><span class="text-[12px] text-cyan-500/80 font-medium">75%</span></div>
+            <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+              <div class="skill-fill h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" data-width="75">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technology tags -->
+      <div class="mt-6 reveal">
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Active
+            Directory</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Windows
+            Server</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">VMware</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">NAS
+            Backup</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Veeam
+            Backup</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">LAN/WAN</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">TCP/IP</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">DNS
+            / DHCP</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Structured
+            Cabling</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">IT
+            Compliance</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Vendor
+            Management</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Opera
+            Cloud</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Symphony
+            POS</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Infrasys
+            Cloud</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">Solidity</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">MySQL</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">HTML
+            / CSS</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">LUA
+            / XML</span>
+          <span
+            class="px-3 py-1.5 rounded-lg text-[11px] font-medium glass-subtle text-stone-500 hover:text-stone-300 transition-colors cursor-default">MS
+            Office</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider max-w-6xl mx-auto"></div>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="py-24 sm:py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-500/80">Career</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">Work <span
+            class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line (desktop) -->
+        <div class="hidden md:block absolute left-[180px] top-8 bottom-8 timeline-bar"></div>
+
+        <!-- Role 1 -->
+        <div class="relative flex flex-col md:flex-row gap-6 md:gap-10 mb-12 reveal-left">
+          <div class="md:w-[160px] flex-shrink-0 md:text-right pt-1">
+            <span class="text-[11px] font-medium text-cyan-500/80 uppercase tracking-wider">Dec 2025 – Present</span>
+            <div class="hidden md:block mt-2 absolute left-[175px] top-2">
+              <div class="timeline-pip"></div>
+            </div>
+          </div>
+          <div class="flex-1 glass rounded-2xl p-6 sm:p-7 card-hover">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <span
+                class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">Current</span>
+            </div>
+            <h3 class="text-lg font-semibold tracking-tight">Network Support Executive</h3>
+            <p class="text-sm text-cyan-500/90 font-medium mt-0.5">iBUS Network & Infrastructure Pvt Ltd</p>
+            <p class="text-[12px] text-stone-500 mt-0.5">Deployed at The LaLiT Great Eastern Kolkata (238 Rooms)</p>
+            <div class="mt-4 space-y-2">
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Delivered Level 1/2 technical support for an
+                enterprise environment of 80+ desktops, 40+ laptops, and 16 servers.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Managed LAN, Wi-Fi, TCP/IP, DNS, DHCP, VLANs,
+                switches, routers, and guest internet connectivity.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Administered user accounts, system access,
+                peripheral devices, OS upgrades, and security patch deployment.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Optimized Help Desk efficiency, reducing incident
+                response times and achieving higher user satisfaction.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Administered Oracle Opera Cloud PMS (v25.5.2.0),
+                Symphony Cloud POS (v19.9.1.60), and WebPrologic Store Mgmt (v5.0.5P).</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Executed manual NAS backups (daily/weekly), verified
+                completion, and coordinated IT hardware procurement & vendors.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">iBUS Network</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Opera Cloud</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Symphony POS</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">NAS Backup</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">WebPrologic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="relative flex flex-col md:flex-row gap-6 md:gap-10 mb-12 reveal-right">
+          <div class="md:w-[160px] flex-shrink-0 md:text-right pt-1">
+            <span class="text-[11px] font-medium text-stone-500 uppercase tracking-wider">Aug 2024 – Dec 2025</span>
+            <div class="hidden md:block mt-2 absolute left-[175px] top-2">
+              <div class="timeline-pip"></div>
+            </div>
+          </div>
+          <div class="flex-1 glass rounded-2xl p-6 sm:p-7 card-hover">
+            <h3 class="text-lg font-semibold tracking-tight">Information Technology Coordinator</h3>
+            <p class="text-sm text-cyan-500/90 font-medium mt-0.5">IHG Hotels & Resorts, Kolkata, India</p>
+            <p class="text-[12px] text-stone-500 mt-0.5">Holiday Inn Kolkata Airport · 137 Rooms</p>
+            <div class="mt-4 space-y-2">
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Daily maintenance and troubleshooting for 45 Desktop
+                PCs, 19 Laptops, and 13 Servers.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Administered Opera V5.6.25.1, Sun V6.3.0.1746,
+                Infrasys Cloud POS, and WebPrologic V5.0.5O.3.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Managed enterprise network infrastructure for
+                secure, high-performance connectivity of 200+ devices.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Managed daily backup data configurations using Veeam
+                Backup & Replication 12.2.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Reduced downtime, managed hardware/services
+                procurement vendors, and optimized helpdesk workflows.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Opera V5.6</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Sun POS</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Infrasys Cloud</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Veeam 12.2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="relative flex flex-col md:flex-row gap-6 md:gap-10 reveal-left">
+          <div class="md:w-[160px] flex-shrink-0 md:text-right pt-1">
+            <span class="text-[11px] font-medium text-stone-500 uppercase tracking-wider">Apr 2019 – Jun 2020</span>
+            <div class="hidden md:block mt-2 absolute left-[175px] top-2">
+              <div class="timeline-pip"></div>
+            </div>
+          </div>
+          <div class="flex-1 glass rounded-2xl p-6 sm:p-7 card-hover">
+            <h3 class="text-lg font-semibold tracking-tight">Trainee Engineer</h3>
+            <p class="text-sm text-cyan-500/90 font-medium mt-0.5">Sysnet Global Technologies Pvt Ltd</p>
+            <p class="text-[12px] text-stone-500 mt-0.5">Client: Hewlett-Packard (HP) · Two Districts Support</p>
+            <div class="mt-4 space-y-2">
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Provided desktop level support with OS and different
+                types of software installation.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Diagnosed and troubleshot various system, LAN, and
+                network related problems.</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Performed component-level hardware replacements
+                (System Board, HDD, RAM, Keyboard, Display).</p>
+              <p class="text-[13px] text-stone-400 leading-relaxed flex gap-2"><span
+                  class="text-stone-600 mt-1 flex-shrink-0">•</span>Ensured smooth service delivery and maintained high
+                customer satisfaction levels.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">HP Service</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Hardware Repair</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Desktop Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider max-w-6xl mx-auto"></div>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="py-24 sm:py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-500/80">Qualifications</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">Education & <span
+            class="gradient-text">Certifications</span></h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0s">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="iconify text-cyan-500" data-icon="mdi:school-outline" data-width="18"></span>
+            </div>
+            <div class="min-w-0">
+              <span class="text-[11px] text-stone-600 font-medium">2021 – 2024</span>
+              <h3 class="text-[15px] font-semibold tracking-tight mt-0.5 leading-snug">Bachelor of Computer Applications
+                (BCA)</h3>
+              <p class="text-[12px] text-cyan-500/80 font-medium mt-0.5">IMS, Tilak Maharashtra Vidyapeeth, Pune</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">C/C++</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Java</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Python</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Android</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">DBMS</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Web Dev</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.1s">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="iconify text-cyan-500" data-icon="mdi:link-variant" data-width="18"></span>
+            </div>
+            <div class="min-w-0">
+              <span class="text-[11px] text-stone-600 font-medium">2022 – 2024</span>
+              <h3 class="text-[15px] font-semibold tracking-tight mt-0.5 leading-snug">Master in Blockchain Development
+              </h3>
+              <p class="text-[12px] text-cyan-500/80 font-medium mt-0.5">Jetking Infotrain, Kolkata</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Solidity</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">HTML / CSS</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Java</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">XML / LUA</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.2s">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="iconify text-cyan-500" data-icon="mdi:memory" data-width="18"></span>
+            </div>
+            <div class="min-w-0">
+              <span class="text-[11px] text-stone-600 font-medium">2018 – 2019</span>
+              <h3 class="text-[15px] font-semibold tracking-tight mt-0.5 leading-snug">Certified Hardware & Networking
+                Engineering</h3>
+              <p class="text-[12px] text-cyan-500/80 font-medium mt-0.5">Jetking Infotrain, Kolkata</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Hardware</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Networking</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">MS Office</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">PC Magic</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Win Server 2008 R2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.3s">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="iconify text-cyan-500" data-icon="mdi:book-open-outline" data-width="18"></span>
+            </div>
+            <div class="min-w-0">
+              <span class="text-[11px] text-stone-600 font-medium">2017</span>
+              <h3 class="text-[15px] font-semibold tracking-tight mt-0.5 leading-snug">Higher Secondary – Commerce</h3>
+              <p class="text-[12px] text-cyan-500/80 font-medium mt-0.5">WBCHSE · Ghola High School, Sodepur</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Commerce</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Sodepur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 card-hover reveal" style="transition-delay:0.4s">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="iconify text-cyan-500" data-icon="mdi:book-open-outline" data-width="18"></span>
+            </div>
+            <div class="min-w-0">
+              <span class="text-[11px] text-stone-600 font-medium">2014</span>
+              <h3 class="text-[15px] font-semibold tracking-tight mt-0.5 leading-snug">Secondary (Madhyamik)</h3>
+              <p class="text-[12px] text-cyan-500/80 font-medium mt-0.5">WBBSE · Sodepur Nobodoy Institute</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">General</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Sodepur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="reveal">
+        <h3 class="text-sm font-semibold uppercase tracking-[0.15em] text-stone-500 mb-4">Professional Certifications
+        </h3>
+        <div class="grid sm:grid-cols-3 gap-3">
+          <div class="glass-subtle rounded-xl p-4 flex items-center gap-3 card-hover">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="iconify text-cyan-500" data-icon="mdi:certificate-outline" data-width="18"></span>
+            </div>
+            <div>
+              <div class="text-[13px] font-medium text-stone-200">HP Printer Certified</div>
+              <div class="text-[11px] text-stone-600">Hewlett-Packard</div>
+            </div>
+          </div>
+          <div class="glass-subtle rounded-xl p-4 flex items-center gap-3 card-hover">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="iconify text-cyan-500" data-icon="mdi:certificate-outline" data-width="18"></span>
+            </div>
+            <div>
+              <div class="text-[13px] font-medium text-stone-200">IHG Certified</div>
+              <div class="text-[11px] text-stone-600">IHG Hotels & Resorts</div>
+            </div>
+          </div>
+          <div class="glass-subtle rounded-xl p-4 flex items-center gap-3 card-hover">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="iconify text-cyan-500" data-icon="mdi:certificate-outline" data-width="18"></span>
+            </div>
+            <div>
+              <div class="text-[13px] font-medium text-stone-200">Oracle Certified</div>
+              <div class="text-[11px] text-stone-600">Oracle Corporation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider max-w-6xl mx-auto"></div>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="py-24 sm:py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-500/80">Portfolio</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">Key <span class="gradient-text">Projects</span>
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="project-card glass rounded-2xl overflow-hidden card-hover reveal" style="transition-delay:0s">
+          <div class="h-40 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-transparent"></div>
+            <span class="iconify text-neutral-700" data-icon="mdi:switch-network" data-width="56"></span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-[15px] font-semibold tracking-tight">Hotel Floor Network Connectivity</h3>
+            <p class="text-[12px] text-stone-500 mt-1.5 leading-relaxed">Troubleshot and configured switch connectivity
+              for all hotel floor rooms. Organized guest network access zones with secure segmentation for a seamless
+              experience.</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Switch Config</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">VLAN</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Guest Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass rounded-2xl overflow-hidden card-hover reveal" style="transition-delay:0.1s">
+          <div class="h-40 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-transparent"></div>
+            <span class="iconify text-neutral-700" data-icon="mdi:server-security" data-width="56"></span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-[15px] font-semibold tracking-tight">Server Room Optimization</h3>
+            <p class="text-[12px] text-stone-500 mt-1.5 leading-relaxed">Reorganized server room cabling infrastructure
+              ensuring optimal airflow and system performance. Managed 16+ servers with Veeam backup integration for
+              complete data protection.</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Cable Mgmt</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Veeam</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Cooling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass rounded-2xl overflow-hidden card-hover reveal" style="transition-delay:0.2s">
+          <div class="h-40 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-transparent"></div>
+            <span class="iconify text-neutral-700" data-icon="mdi:headset" data-width="56"></span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-[15px] font-semibold tracking-tight">Help Desk Workflow Optimization</h3>
+            <p class="text-[12px] text-stone-500 mt-1.5 leading-relaxed">Redesigned help desk processes resulting in
+              measurably faster response times and higher internal user satisfaction. Implemented structured ticketing
+              and escalation protocols.</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Process Design</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">L1/L2</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">SLA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass rounded-2xl overflow-hidden card-hover reveal" style="transition-delay:0.3s">
+          <div class="h-40 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-transparent"></div>
+            <span class="iconify text-neutral-700" data-icon="mdi:cube-scan" data-width="56"></span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-[15px] font-semibold tracking-tight">Blockchain Development Study</h3>
+            <p class="text-[12px] text-stone-500 mt-1.5 leading-relaxed">Comprehensive professional course covering
+              smart contracts, decentralized applications, and Web3 fundamentals using Solidity, with hands-on project
+              work.</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Solidity</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Web3</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-white/[0.04] text-stone-500">Smart Contracts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider max-w-6xl mx-auto"></div>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="py-24 sm:py-32 px-6 relative">
+    <div
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-t from-cyan-900/[0.05] to-transparent rounded-full blur-3xl pointer-events-none">
+    </div>
+    <div class="max-w-3xl mx-auto relative z-10">
+      <div class="text-center mb-12 reveal">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-500/80">Contact</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">Let's Work <span
+            class="gradient-text">Together</span></h2>
+        <p class="text-stone-500 font-light mt-3 text-[15px] max-w-md mx-auto">Have a role or project in mind? I'd love
+          to hear from you. Send me a message and I'll get back to you promptly.</p>
+      </div>
+
+      <div class="glass rounded-2xl p-6 sm:p-8 reveal">
+        <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name"
+                class="block text-[11px] text-stone-500 uppercase tracking-[0.15em] mb-1.5 font-medium">Full
+                Name</label>
+              <input id="name" type="text" required placeholder="John Doe"
+                class="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 py-3 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-cyan-500/40 focus:bg-white/[0.05] transition-all duration-300">
+            </div>
+            <div>
+              <label for="email"
+                class="block text-[11px] text-stone-500 uppercase tracking-[0.15em] mb-1.5 font-medium">Email
+                Address</label>
+              <input id="email" type="email" required placeholder="john@company.com"
+                class="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 py-3 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-cyan-500/40 focus:bg-white/[0.05] transition-all duration-300">
+            </div>
+          </div>
+          <div>
+            <label for="subject"
+              class="block text-[11px] text-stone-500 uppercase tracking-[0.15em] mb-1.5 font-medium">Subject</label>
+            <input id="subject" type="text" required placeholder="Job Opportunity / Collaboration"
+              class="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 py-3 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-cyan-500/40 focus:bg-white/[0.05] transition-all duration-300">
+          </div>
+          <div>
+            <label for="message"
+              class="block text-[11px] text-stone-500 uppercase tracking-[0.15em] mb-1.5 font-medium">Message</label>
+            <textarea id="message" required rows="5" placeholder="Tell me about the opportunity..."
+              class="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 py-3 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-cyan-500/40 focus:bg-white/[0.05] transition-all duration-300 resize-none"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full py-3.5 bg-white text-black text-sm font-semibold rounded-xl hover:bg-stone-200 transition-colors duration-300 flex items-center justify-center gap-2 group">
+            Send Message
+            <span class="iconify group-hover:translate-x-0.5 transition-transform" data-icon="mdi:arrow-right"
+              data-width="16"></span>
+          </button>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-white/5 grid sm:grid-cols-3 gap-4">
+          <a href="mailto:souviksarkardev@gmail.com"
+            class="flex items-center gap-2.5 text-stone-400 hover:text-cyan-400 transition-colors group">
+            <div
+              class="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center group-hover:bg-cyan-500/10 transition-colors">
+              <span class="iconify" data-icon="mdi:email-outline" data-width="15"></span>
+            </div>
+            <span class="text-[12px] break-all">souviksarkardev@gmail.com</span>
+          </a>
+          <a href="tel:+917003520276"
+            class="flex items-center gap-2.5 text-stone-400 hover:text-cyan-400 transition-colors group">
+            <div
+              class="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center group-hover:bg-cyan-500/10 transition-colors">
+              <span class="iconify" data-icon="mdi:phone-outline" data-width="15"></span>
+            </div>
+            <span class="text-[12px]">+91 7003520276</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 text-stone-400 hover:text-cyan-400 transition-colors group">
+            <div
+              class="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center group-hover:bg-cyan-500/10 transition-colors">
+              <span class="iconify" data-icon="mdi:linkedin" data-width="15"></span>
+            </div>
+            <span class="text-[12px]">LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-white/[0.04] py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div
+          class="w-6 h-6 rounded bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center text-black font-bold text-[10px]">
+          SS</div>
+        <span class="text-[12px] text-stone-600">© 2026 Souvik Sarkar. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:souviksarkardev@gmail.com" class="text-stone-600 hover:text-stone-300 transition-colors"
+          aria-label="Email"><span class="iconify" data-icon="mdi:email-outline" data-width="16"></span></a>
+        <a href="tel:+917003520276" class="text-stone-600 hover:text-stone-300 transition-colors"
+          aria-label="Phone"><span class="iconify" data-icon="mdi:phone-outline" data-width="16"></span></a>
+        <a href="#" class="text-stone-600 hover:text-stone-300 transition-colors" aria-label="LinkedIn"><span
+            class="iconify" data-icon="mdi:linkedin" data-width="16"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast"
+    class="toast fixed bottom-6 right-6 z-[70] glass rounded-xl px-5 py-3.5 flex items-center gap-3 max-w-xs no-print">
+    <span class="iconify text-emerald-500 flex-shrink-0" data-icon="mdi:check-circle" data-width="20"></span>
+    <div>
+      <div class="text-[13px] font-medium text-white">Message Sent</div>
+      <div class="text-[11px] text-stone-400">Thank you for reaching out.</div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-6 left-6 z-50 w-10 h-10 rounded-xl glass flex items-center justify-center text-stone-500 hover:text-white transition-all duration-300 opacity-0 pointer-events-none no-print"
+    aria-label="Back to top">
+    <span class="iconify" data-icon="mdi:chevron-up" data-width="20"></span>
+  </button>
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+        filter: blur(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes glow-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(6, 182, 212, 0.25);
+      }
+    }
+
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .glow-pulse {
+      animation: glow-pulse 3s ease-in-out infinite;
+    }
+
+    .project-card .iconify {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.6s ease;
+    }
+
+    .project-card:hover .iconify {
+      transform: scale(1.15) rotate(5deg);
+      color: #06b6d4;
+    }
+  </style>
+
+  <script>
+    // ===== ENHANCED TYPEWRITER EFFECT =====
+    class Typewriter {
+      constructor(element, words, waitTime = 2500) {
+        this.element = element;
+        this.words = words;
+        this.txt = '';
+        this.wordIndex = 0;
+        this.waitTime = parseInt(waitTime, 10);
+        this.isDeleting = false;
+        this.type();
+      }
+
+      type() {
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
+
+        // Add or remove characters
+        this.txt = fullTxt.substring(0, this.txt.length + (this.isDeleting ? -1 : 1));
+        this.element.textContent = this.txt;
+
+        // Base typing speed with slight randomness for a human feel
+        let typeSpeed = 80 - Math.random() * 30;
+        if (this.isDeleting) typeSpeed /= 2; // Delete faster
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          typeSpeed = this.waitTime; // Pause at the end of the word
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+          this.isDeleting = false;
+          this.wordIndex++;
+          typeSpeed = 400; // Pause before typing the next word
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const typedEl = document.getElementById('typedRole');
+      const roles = [
+        'Network Support Executive',
+        'IT Infrastructure Specialist',
+        'Hospitality Technology Expert',
+        'Systems Administrator',
+        'Hardware & Networking Professional'
+      ];
+      if (typedEl) {
+        setTimeout(() => new Typewriter(typedEl, roles, 2500), 1000);
+      }
+    });
+
+    // ===== SCROLL REVEALS with stagger =====
+    function checkReveals() {
+      const elements = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.88) {
+          const siblings = el.parentElement.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');
+          const sibIndex = Array.from(siblings).indexOf(el);
+          if (!el.style.transitionDelay) el.style.transitionDelay = `${sibIndex * 0.08}s`;
+          el.classList.add('active');
+        }
+      });
+    }
+
+    // ===== SKILL BARS =====
+    function checkSkills() {
+      document.querySelectorAll('.skill-fill').forEach(bar => {
+        if (bar.getBoundingClientRect().top < window.innerHeight * 0.88 && !bar.dataset.filled) {
+          bar.dataset.filled = '1';
+          bar.style.width = bar.dataset.width + '%';
+        }
+      });
+    }
+
+    // ===== COUNTERS with easeOut =====
+    function checkCounters() {
+      document.querySelectorAll('.counter-tabular').forEach(c => {
+        if (c.getBoundingClientRect().top < window.innerHeight * 0.88 && !c.dataset.done) {
+          c.dataset.done = '1';
+          const target = +c.dataset.target, suffix = c.dataset.suffix || '';
+          const duration = 1500;
+          const startTime = performance.now();
+          function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+          function animateCounter(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const cur = Math.round(easeOutExpo(progress) * target);
+            c.textContent = cur + suffix;
+            if (progress < 1) requestAnimationFrame(animateCounter);
+          }
+          requestAnimationFrame(animateCounter);
+        }
+      });
+    }
+
+    // ===== NAVBAR =====
+    function updateNav() {
+      const nav = document.getElementById('nav');
+      if (window.scrollY > 60) {
+        nav.style.background = 'rgba(10,10,10,0.85)';
+        nav.style.backdropFilter = 'blur(20px)';
+        nav.style.borderBottom = '1px solid rgba(255,255,255,0.04)';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'none';
+        nav.style.borderBottom = 'none';
+      }
+      // Active links
+      const ids = ['about', 'skills', 'experience', 'education', 'projects', 'contact'];
+      let cur = '';
+      ids.forEach(id => { const s = document.getElementById(id); if (s && scrollY >= s.offsetTop - 160) cur = id; });
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+    }
+
+    // ===== BACK TO TOP =====
+    function updateBTT() {
+      const b = document.getElementById('backToTop');
+      if (scrollY > 500) { b.style.opacity = '1'; b.style.pointerEvents = 'auto'; }
+      else { b.style.opacity = '0'; b.style.pointerEvents = 'none'; }
+    }
+
+    window.addEventListener('scroll', () => { checkReveals(); checkSkills(); checkCounters(); updateNav(); updateBTT(); }, { passive: true });
+
+    // ===== MOBILE MENU =====
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mobileNav');
+      const overlay = document.getElementById('mobileOverlay');
+      const open = nav.classList.toggle('open');
+      overlay.classList.toggle('hidden', !open);
+      document.getElementById('menuToggle').setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    // ===== FORM =====
+    function handleSubmit(e) {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      e.target.reset();
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // ===== INIT =====
+    checkReveals(); checkSkills(); checkCounters(); updateNav();
+
+    // ===== ENHANCED PARTICLE CONSTELLATION =====
+    const canvas = document.getElementById('particleCanvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      let mouse = { x: null, y: null };
+      const props = {
+        particleColor: 'rgba(6, 182, 212, 0.5)',
+        lineColor: '6, 182, 212',
+        particleRadius: 1.8,
+        particleCount: 120,
+        maxVelocity: 0.4,
+        lineLength: 150,
+        mouseRadius: 180
+      };
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+      window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+      window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * props.maxVelocity;
+          this.vy = (Math.random() - 0.5) * props.maxVelocity;
+          this.baseRadius = props.particleRadius * (0.5 + Math.random() * 0.8);
+          this.radius = this.baseRadius;
+          this.opacity = 0.2 + Math.random() * 0.5;
+          this.pulseSpeed = 0.005 + Math.random() * 0.01;
+          this.pulseOffset = Math.random() * Math.PI * 2;
+          this.time = 0;
+        }
+        update() {
+          this.time += this.pulseSpeed;
+          this.radius = this.baseRadius * (0.8 + 0.4 * Math.sin(this.time + this.pulseOffset));
+          if (mouse.x && mouse.y) {
+            const dx = mouse.x - this.x, dy = mouse.y - this.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < props.mouseRadius) {
+              const force = (props.mouseRadius - dist) / props.mouseRadius;
+              this.vx += (dx / dist) * force * 0.015;
+              this.vy += (dy / dist) * force * 0.015;
+              this.radius = this.baseRadius * (1 + force * 1.5);
+            }
+          }
+          this.vx *= 0.999;
+          this.vy *= 0.999;
+          if (this.x > width || this.x < 0) this.vx *= -1;
+          if (this.y > height || this.y < 0) this.vy *= -1;
+          this.x += this.vx;
+          this.y += this.vy;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, Math.max(0.5, this.radius), 0, Math.PI * 2);
+          ctx.fillStyle = props.particleColor;
+          ctx.globalAlpha = this.opacity;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+      }
+      for (let i = 0; i < props.particleCount; i++) particles.push(new Particle());
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < props.lineLength) {
+              const opacity = 1 - (dist / props.lineLength);
+              ctx.lineWidth = 0.4 + opacity * 0.3;
+              ctx.strokeStyle = `rgba(${props.lineColor}, ${opacity * 0.25})`;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+          if (mouse.x && mouse.y) {
+            const dx = particles[i].x - mouse.x, dy = particles[i].y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < props.mouseRadius) {
+              const opacity = 1 - (dist / props.mouseRadius);
+              ctx.lineWidth = 0.5 + opacity * 0.5;
+              ctx.strokeStyle = `rgba(${props.lineColor}, ${opacity * 0.5})`;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.stroke();
+              if (i === 0) {
+                const g = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 80);
+                g.addColorStop(0, `rgba(${props.lineColor}, 0.08)`);
+                g.addColorStop(1, 'transparent');
+                ctx.fillStyle = g;
+                ctx.fillRect(mouse.x - 80, mouse.y - 80, 160, 160);
+              }
+            }
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+  </script>
+</body>
+
+</html>
